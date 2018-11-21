@@ -1,5 +1,5 @@
 from django.core.management.base import BaseCommand
-from sunpoplife.core.models import InstagramPhoto
+from instagram.models import InstagramPhoto
 import urllib2
 import json
 
@@ -16,7 +16,7 @@ class Command(BaseCommand):
     help = 'Instagram Feed'
 
     def handle(self, *args, **options):
-        url = 'HERE WAS INSTAGRAM TOKEN'
+        url = 'https://www.instagram.com/hotvocals/?__a=1'
         try:
             instagram_feed = urllib2.urlopen(url)
         except:
